@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap);
+/* common */
+html {font-size: 0.625rem;}
+body {font-size: 1.5rem; font-family: 'Spoqa Han Sans Neo', sans-serif; max-width: 720px;}
+.inner {width: 95%; margin: 0 auto;}
+section {padding: 140px 0;}
+section h4 {margin-bottom: 80px; font-size: 20px; color: #111; text-align: center;} 
+main, section, footer {z-index: 1;}
+
+/* header */
+header {position: fixed; max-width: 100%; height: 140px; background-color: #fff; z-index: 1000;}
+header .header_bg {width: 100%; height: 80px; overflow: hidden;}
+header .inner > div {display: flex; justify-content: space-between; align-items: center; margin: 0 auto; width: 100%;}
+header h1 a {display: block; width: 150px; height: 60px; line-height: 60px;}
+header h1 a img {padding: 5px 0;}
+header nav {position: fixed; right: -100%; top: 0; bottom: 0; padding: 60px 50px; width: 300px; background: #fff; box-sizing: border-box; transition: all 0.5s; box-shadow: 0px 0px 20px rgba(0,0,0,0.35);}
+header nav.on {right: 0;}
+header nav .util {position: absolute; top: 20px;}
+header nav .util p {display: inline-block; margin-right: 10px;}
+header nav .util p a{font-size: 1.4rem; color: #757575;}
+header nav .util p a:focus {color: #123562;}
+header nav > ul {display: block;}
+header nav > ul ul {display: block;}
+header nav .close {display: block; position: absolute; right: 15px; top: 20px; width: 20px; height: 20px; background: url(../img/btn_close.png)no-repeat center;}
+header nav > ul > li > a {display: block; padding: 0; line-height: 60px; font-size: 1.5rem; color: #222; transition: all 0.4s;}
+header nav > ul > li > a:focus, header nav > ul > li:hover > a {color: #111; font-weight: 500;}
+header nav > ul > li > ul a {display: block; line-height: 25px; font-size: 1.4rem; color: #757575; transition: all 0.4s;}
+header .btn_nav {width: 50px; height: 50px; background: url(../img/btn_nav4.png)no-repeat center;}
+.dim {position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,00,0.8); display: none; z-index: 1000;}/* ToT */
+
+/* main */
+main {padding-top: 140px;}
+#visual {width: 100%; height: 80vh;}
+#visual .inner {height: 32%; padding: 40px 0; box-sizing: border-box;}
+#visual .title_box h3 {margin-bottom: 40px; font-size: 28px; color: #000; font-weight: 500;}
+#visual .title_box h3 span {display: block; font-size: 20px; font-weight: 400; margin-bottom: 5px;}
+
+/* control - visual */
+#visual .title_box .swiper-pagination-fraction{float: left; width: 100px; font-size: 20px;}
+#visual .title_box .control {margin-bottom: 20px;}
+#visual .title_box .control .swiper-pagination-current{margin-right: 8px; font-weight: 700; color: #d80000;}
+#visual .title_box .control .swiper-pagination-total {margin-left: 8px; font-weight: 200;}
+
+/* button - visual */
+#visual .title_box .btn {position: relative; display: inline-block; width: 40px;}
+#visual .title_box .btn button{width: 40px; height: 18px; line-height: 18px; background: no-repeat center/contain; border: none; cursor: pointer;}
+#visual .title_box .btn .prev{background-image: url(../img/prev.svg);}
+#visual .title_box .btn .prev:focus{background-image: url(../img/prev_hover.svg);}
+#visual .title_box .btn .stop{position: absolute; top: 0; left: 30px;background-image: url(../img/stop.svg); display: inline-block;}
+#visual .title_box .btn .stop:focus {background-image: url(../img/stop_hover.svg);}
+#visual .title_box .btn .play{position: absolute; top: 0; left: 30px; background-image: url(../img/play.svg); display: none;}
+#visual .title_box .btn .play:focus{background-image: url(../img/play_hover.svg);}
+#visual .title_box .btn .next{position: absolute; left: 60px; background-image: url(../img/next.svg);}
+#visual .title_box .btn .next:focus{background-image: url(../img/next_hover.svg);}
+
+/* swiper - visual */
+#visual .visual_list {height: 70%;}
+#visual .visual_list .swiper {width: 100%; height: 100%;}
+#visual .visual_list .swiper .swiper-slide {display: block; width: 100%; height: 100%; text-align: center; font-size: 18px; background:  #fff no-repeat center/cover;}
+#visual .visual_list .swiper .swiper-slide:nth-child(1) {background-image: url(../img/banner_bg_1.png);}
+#visual .visual_list .swiper .swiper-slide:nth-child(2) {background-image: url(../img/banner_bg_2.jpg); }
+#visual .visual_list .swiper .swiper-slide:nth-child(3) {background-image: url(../img/banner_bg_3.jpg); }
+#visual .visual_list .swiper .swiper-slide a {position: relative; width: 100%; height: 100%; display: block;}
+#visual .visual_list .swiper .swiper-slide:nth-child(1) a span {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'East Sea Dokdo', serif; font-size: 84px; color: #123562; text-shadow: 0 0 20px rgba(255,255,255,1);}
+
+/* icon - section */
+#icon{background: url(../img/bg_visual_m.png) no-repeat center/contain}
+#icon ul li {position: relative; float: left; width: calc(100%/2); margin-bottom: 50px; text-align: center;}
+#icon ul li:nth-child(4):before,#icon ul li:nth-child(2):before {content: ''; position: absolute; height: 140%; width: 1px; background: rgba(204, 204, 204, 0.4); left: 0;}
+#icon ul li:hover .icon {transform: translateY(-10px);}
+#icon ul li:nth-child(1)::after, #icon ul li:nth-child(2)::after {content: ''; position: absolute; height: 1px; width: 100%; background: rgba(204, 204, 204, 0.4); left: 0; bottom: -30px;}
+#icon ul li:hover .title {color: #1e64b0;}
+#icon ul li:hover .shadow {display: block;}
+#icon ul li .icon {width: 40%; margin-bottom: 24px; transition: all 0.3s;}
+#icon ul li .shadow {position: absolute; bottom: 30%; left: 34%; width: 35%; display: none; opacity: 0.5;}
+#icon ul li:last-child .shadow {left: 32%;}
+#icon ul li .title span {display: block;}
+
+/* button - section */
+#button {height: 300px; padding: 0; overflow: auto; white-space: nowrap;}
+#button .inner {background: url(../img/contents_bg.png)no-repeat center; width: 1500px; height: 100%;}
+#button .title {position: relative; background: url(../img/contents_title.png)no-repeat center left/contain; width: 1300px; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#button .title .point_btn {display: block; position: absolute; width: 22px; height: 22px; line-height: 22px; border-radius: 50%; border: 2px solid #fff; transform: translate(-50%, -50%); background: #1e64b0; color: #fff; font-size: 19px; font-weight: 500; text-align: center;}
+#button .title .btn1, #button .title .content1 {top: 55%; left: 7%;}
+#button .title .btn2, #button .title .content2 {top: 55%; left: 34.5%;}
+#button .title .btn3, #button .title .content3 {top: 47%; left: 65.5%;}
+#button .title .btn4, #button .title .content4 {top: 54%; left: 79.75%;}
+#button .title .point_content {position: absolute; width: 160px; height: 160px; padding: 60px 0; box-sizing: border-box; background: #1e64b0; border-radius: 50%; transition: all 0.25s; color: #fff; font-size: 22px; text-align: center; transform: translate(-50%, -50%) scale(0);}
+#button .title .point_content span {display: block; font-size: 16px;}
+#button .title .point_content.selected {transform: translate(-50%, -50%) scale(1);}
+
+/* book - section */
+#book {position: relative;}
+#book::before {content: ''; position: absolute; width: 370px; height: 370px; background: rgb(31, 54, 81, 0.1);  border-radius: 50%; top: 49%; left: 50%; transform: translate(-50%,-50%);}
+#book .swiper-slide {margin-bottom: 40px; text-align: center; color: #333;}
+#book .swiper-slide img{margin-bottom: 30px;}
+#book .swiper-slide .field {margin-bottom: 5px;}
+#book .swiper-button-next:after, #book .swiper-button-prev:after {font-size: 15px;}
+#book .swiper-button-next, #book .swiper-button-prev {position: absolute; top: 85%; width: 26px; height: 26px; color: #111; background: #ccc;  border-radius: 50px;}
+#book .swiper-button-next {right: 35%;}
+#book .swiper-button-prev {left: 35%;}
+#book .swiper-button-stop a, #book .swiper-button-play a{position: absolute; top: 83.75%; width: 26px; height: 26px; background: #fff ; border: 1px solid #ccc; border-radius: 50px; left: 50%; transform: translate(-50%,-50%);}
+#book .swiper-button-stop a::after, #book .swiper-button-play a::after{content: ''; display: block; width: 100%; height: 70%; line-height: 1; background: no-repeat center/contain;;}
+#book .swiper-button-stop a::after{margin: 4px auto; background-image: url(../img/stop.svg)}
+#book .swiper-button-play a::after{margin: 3px 2px; background-image: url(../img/play.svg)}
+
+/* footer */
+footer{position: relative; display: block; height: auto; padding: 50px 0; background: #123562; color: #ccc; text-align: center;}
+footer .title {width: 200px; margin: 0 auto; font-size: 20px;}
+footer .text {width: 100%; padding-top: 30px; box-sizing: border-box; text-align: center;}
+footer .text .safety a {height: 30px; margin-right: 5px;  padding: 5px 10px; background: #fff;  border-radius: 50px; opacity: 0.5; color: #160052;}
+footer .text .safety a:hover {opacity: 0.9;}
+footer .text address {margin: 50px 0;}
+footer .text address i {margin-left: 5px; transform: rotate(90deg);}
+footer .text span {display: block; margin: 5px 0;}
+footer .slogan{padding-top: 30px; opacity: 0.5;}
+footer .slogan img {width: 100px;}
+
+/* vr */
+#vr {position: absolute; top: 41%; right: 2%; width: 150px; height: 150px; z-index: 1;}
+#vr a{position: relative; display: block; height: 90%; width: 90%;}
+#vr a::before {content: ''; display: block; position: absolute; width: 100%; height: 100%; background: url(../img/vr_ani.png) no-repeat center/contain; animation: spin 8s linear infinite;}
+#vr .vr_red {position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 95px; height: 95px; border-radius: 50%; background: #de1a3d; box-shadow: 3px 5px 20px rgba(0,0,0,0.35);}
+#vr .vr_red:focus {background: linear-gradient(45deg,#de1a3d,#de681a);}
+#vr .vr_red img {position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); width: 40%;}
+#vr .vr_red p{padding: 30px 0; box-sizing: border-box; color: #fff; font: 14px 'Black Han Sans', sans-serif; text-align: center; letter-spacing: -2;}
+@keyframes  spin {
+    100% {transform: rotate(360deg);}
+}
