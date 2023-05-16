@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/*한글폰트*/
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/*영문폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');

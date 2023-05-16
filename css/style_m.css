@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* common */
+#container {position: relative; height: auto;}
+#container > div {height: 100vh;}
+a, span, button {transition: border-color .4s,color .4s,opacity .4s,transform .4s}
+.swiper-slide {overflow: hidden;}
+#container .swiper-pagination {position: absolute; height: 0; top: 40%; transform: translateY(-50%); /*  */right: 4%;}
+#container .swiper-pagination-bullet {width: 4px; /*  */height: 20px; margin: 20px 0; border-radius: 0; background-color: rgba(255,255,255,0.5);}
+
+/* header */
+header {position: fixed; width: 100%; height: 40px; transition: all 0.5s; z-index: 100;}
+header h1 {position: relative; float: left; top: 7vh; left: 8vw; opacity: 0;}
+header h1::before{position: absolute; content: '&'/* 일단 &로 넣어봄 */; font-family: 'Yeseva One'; color: transparent; -webkit-text-stroke-width: 0.2px; -webkit-text-stroke-color: #fff; font-size: 7.0rem; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.5; text-shadow: 0 0 5px rgb(38, 22, 85); z-index: -1;}
+header h1 a{font-family: 'Cormorant Upright'; color: rgba(255,255,255,0.8); font-weight: bold;  font-size: 3.2rem; text-shadow: 0 0 5px rgba(0,0,0,0.8);}
+header h1 a:hover, #main header h1 a:focus {color: #fff;}
+.btn {display: block; position: absolute; top: 7vh; right: 10%; opacity: 0;}
+.btn .menu-trigger, .menu-trigger span {display: inline-block; transition: all 0.4s; box-sizing: border-box;}
+.btn .menu-trigger {position: relative; width: 30px; height: 30px;}
+.btn .menu-trigger span {position: absolute; left: 0; width: 100%; height: 1px; background-color: #fff; border-radius: 4px; opacity: 0.5;}
+.btn .menu-trigger span:nth-of-type(1) {top: 0;}
+.btn .menu-trigger span:nth-of-type(2) {top: 15px;}
+.btn .menu-trigger span:nth-of-type(3) {bottom: 0;}
+.btn .menu-trigger.active-1 span:nth-of-type(1) {-webkit-transform: translateY(15px) rotate (-45deg); transform: translateY(15px) rotate(-45deg);}
+.btn .menu-trigger.active-1 span:nth-of-type(2) {opacity: 0;}
+.btn .menu-trigger.active-1 span:nth-of-type(3) {-webkit-transform: translateY(-15px) rotate(45deg); transform: translateY(-15px) rotate(45deg);}
+/*  header > gnb */
+header #gnb {float: none; width: 0%; height: 0%; padding-top: 180px; background: rgb(54, 5, 54); transition: all 0.4; display: none}
+header #gnb ul {width: 100%; height: inherit;}
+header #gnb ul li {float: none; width: 100%; height: calc(100%/4); opacity: 1; text-align: center;}
+header #gnb ul li a {display: none; font-size: 4.2rem; font-weight: 100; color: rgba(255,255,255,0.25);}
+header #gnb ul li a:hover, #gnb ul li a:focus{color: rgba(255,255,255,0.7);}
+header #gnb ul li a strong{color: rgba(255,255,255,0.7); font-weight: 100;}
+#gnb.on {height: 80%; width: 100%; display: block;}
+#gnb.on a {display: block;}
+/* visual */
+#main {height: 100vh; max-width: 100vw;}
+#main .wrap {width: 100vw; height: 100vh; position: relative;}
+#main .wrap .circle {width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; overflow: hidden; border-radius: 100%; background: url(../img/geine.png)no-repeat center/contain; transform: translate3d(0, 0, 0) translate(-50%, -50%) rotate(-25deg); box-shadow: 0 0 30px rgba(247, 255, 202, 0.5);}
+#main .wrap .circle .smoke {position: absolute; width: 330px; height: 330px; background: no-repeat center/contain;animation-timing-function: ease-in-out; opacity: 1}
+#main .wrap .circle .smoke-one {top: -65%; left: -30%; background-image: url(../img/smoke01.png); animation: move1 10s infinite;}
+#main .wrap .circle .smoke-two {top: -60%; left: 30%; background-image: url(../img/smoke02.png); ; animation: move1 15s infinite;}
+#main .wrap .circle .smoke-three {top: 30%; left: -30%; background-image: url(../img/smoke03.png); animation: move2 20s infinite;}
+#main .wrap .circle .smoke-four {top: 0%; left: 40%; background-image: url(../img/smoke04.png); animation: move2 7s infinite;}
+#main .wrap .circle img {position: absolute; bottom: 0; right: 20%; width: 30%; height: 20%; opacity: 0.8;}
+    @keyframes move1
+        {0%, 100% {transform: scale(0) rotate(360deg);}
+        50% {transform: scale(1) rotate(-360deg)}}
+    @keyframes move2
+        {0%, 100% {transform: scale(1) rotate(-360deg); opacity: 1;}
+        50% {transform: scale(0.5) rotate(360deg); opacity: 0.5;}}
+#main .wrap .circle .fa-asterisk {position: absolute; font-size: 13px; color: #f6ffa6; opacity: 0.8;}
+#main .wrap .circle .star1 {top: 20%; left: 30%; animation: star 2s infinite;}
+#main .wrap .circle .star2 {top: 15%; right: 30%; animation: star 1.7s infinite;}
+#main .wrap .circle .star3 {top: 55%; left: 10%; animation: star 1.5s infinite;}   
+#main .wrap .circle .star4 {top: 70%; right: 10%; font-size: 5px; animation: star 1.9s infinite;}
+#main .wrap .circle .star5 {top: 80%; right: 65%; font-size: 5px; animation: star 1.2s  infinite;}
+    @keyframes star
+        {0%, 100% {transform: scale(0); opacity: 0;}
+        50% {transform: scale(1); opacity: 1;}}
+#main .wrap .text_box {position: absolute; width: 300px; height: 100%; top: 0; left: 50%; transform: translateX(-50%);}
+#main .wrap .text_box p {position: absolute; transform: translateX(-5%); width: 300px; height: 130px; font: 9.2rem 'Great Vibes', cursive; color: #fff; text-align: center; overflow-X: hidden; border-radius: 10%;}
+#main .wrap .text_box p strong{display: block; animation-duration: 2s;}
+@keyframes appear1{ from {transform: translateY(300px);} to{transform: translateY(0);}}
+@keyframes appear2{ from {transform: translateY(-300px);} to{transform: translateY(0);}}
+#main .wrap .text_box .f_text {top: 15%; left: 0%;}
+#main .wrap .text_box .f_text strong{animation-name: appear1;}
+#main .wrap .text_box .b_text {bottom: 15%; right: 0%;}
+#main .wrap .text_box .b_text strong{animation-name: appear2;}
+
+/* portfolio > swiper */
+h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color: rgba(143, 63, 174, 0.4); margin-bottom: 40px; letter-spacing: -4px; bottom: 5%; right: 50px; font-style: italic; z-index: -1;}
+#portfolio .swiper-wrapper .swiper-slide {height: 100vh;}
+#portfolio .page_controler {position: absolute; width: 250px; bottom: 5%; left: 50%; transform: translate(-50%); z-index: 100;}
+#portfolio .page_controler .swiper-pagination-bullet {margin: 0 16px; border-radius: 0; height: 10px; width: 10px;}
+#portfolio .page_controler .swiper-pagination-bullet-active {background: #ffb641;}
+#portfolio .swiper-wrapper {position: relative;}
+/* portfolio > defult - earth */
+#portfolio .swiper-slide .desc_box {position: relative; float: left; width: 100vw; top: 11%;}
+#portfolio .swiper-slide .desc_box::before{content: ''; position: absolute; width: 100%; height: 50vh; background: rgba(224, 255, 255, 0.8); transform: rotate(15deg); z-index: -1;}
+#portfolio .swiper-slide .desc_box .inner {width: 85%; margin: 50px auto; text-align: center;}
+#portfolio .swiper-slide .desc_box h3 {font-size: 4.3rem; font-weight: 700;}
+#portfolio .swiper-slide .desc_box h3 span {display: block; font-weight: 500; font-size: 3.3rem; margin-bottom: 10px;}
+#portfolio .swiper-slide .desc_box .hash_box {width: 100%; margin-bottom: 15px;}
+#portfolio .swiper-slide .desc_box .hash_box span{display: inline-block; height: 30px; line-height: 30px; padding: 0 10px; border: 1px solid #333; border-radius: 50px; color: #333; margin:0 10px 7px 0; font-size: 1.4rem;}
+#portfolio .swiper-slide .desc_box .hash_box span:hover, #portfolio .swiper-slide .desc_box .hash_box span:focus{color: #017250; border-color: #017250;}
+#portfolio .swiper-slide .desc_box a {padding: 10px 20px; background: transparent; color: #017250; cursor: pointer; display: inline-block; margin-right: 10px; border: 1px solid #017250; font-size: 1.6rem;}
+#portfolio .swiper-slide .desc_box a:hover {background: #017250; color: #fff;}
+
+#portfolio .swiper-slide .mokup {position: relative; float: right; width: 100vw; top: 9%;}
+#portfolio .swiper-slide .mokup p {position: absolute; top: 5%; left: 13%;}
+#portfolio .swiper-slide .mokup p span {color: rgba(255, 255, 255, 0.7); font-size: 2.0rem; letter-spacing: 1px;}
+#portfolio .swiper-slide .mokup .m{display: block;}
+#portfolio .swiper-slide .mokup .w{display: none;}
+
+#portfolio .swiper-slide .mokup > div {position: absolute; height: 100vh; background: no-repeat center/contain;}
+#portfolio .swiper-slide .mokup > div .display {position: absolute; overflow: hidden; background: #017250; opacity: 1;}
+#portfolio .swiper-slide .mokup > div .display img {position: absolute; width: 100%; top: 0; left: 50%; transform: translateX(-50%); transition: all 10s;}
+
+#portfolio .swiper-slide .mokup .device_w {left: 30%; width: 60%; height: 230px; background-image: url(../img/device_w.png);}
+#portfolio .swiper-slide .mokup .device_w .display {width: 78%; height: 110px; top: 24%; left: 14.6%; transform: perspective(177px) rotateX(1deg)}
+
+#portfolio .swiper-slide .mokup .device_m {left: 15%; width: 65px; height: 200px; background-image: url(../img/device_m.png); transform: rotate3d(0, 0, 1, -10deg);}
+#portfolio .swiper-slide .mokup .device_m .display {width: 52px; height: 112px; top: 21%; left: 6%; border-radius: 5px; transform: rotate(-0.5deg)}
+
+/* portfolio - coustom color */
+#portfolio .earth .mokup .device_w .display:hover img {top: -263px;}
+#portfolio .earth .mokup .device_m .display:hover img {top: -248px;}
+
+#portfolio .heritage .desc_box a, #portfolio .heritage .desc_box button, #portfolio .heritage .desc_box .hash_box span:hover, #portfolio .heritage .desc_box .hash_box span:focus {color: #1e64b0; border-color: #1e64b0;}
+#portfolio .heritage .desc_box a:hover, #container .heritage .desc_box button:hover {background: #1e64b0; color: #fff;}
+#portfolio .heritage .desc_box a:nth-child(5) {width: auto; margin-top: 10px; text-align: center;}
+#portfolio .heritage .mokup .device_w .display:hover img {top: -172px;}
+#portfolio .heritage .mokup .device_m .display:hover img {top: -306px;}
+
+#portfolio .THP .desc_box a, #portfolio .THP .desc_box button, #portfolio .THP .desc_box .hash_box span:hover, #portfolio .THP .desc_box .hash_box span:focus {color: #ff9a1f; border-color: #ff9a1f;}
+#portfolio .THP .desc_box a:hover, #portfolio .THP .desc_box button:hover {background: #ff9a1f; color: #fff;}
+#portfolio .THP .mokup .device_w .display:hover img {top: -469%;}
+#portfolio .THP .mokup .device_m .display:hover img {top: -543%;}
+
+#portfolio .kakao .mokup .device_w {left: 18%;}
+#portfolio .kakao .desc_box a, #portfolio .kakao .desc_box button, #portfolio .kakao .desc_box .hash_box span:hover, #portfolio .kakao .desc_box .hash_box span:focus {color: #fae101; border-color: #fae101;}
+#portfolio .kakao .desc_box a:hover, #container .kakao .desc_box button:hover {background: #fae101; color: #fff;}
+#portfolio .kakao .mokup .device_w .display:hover img {top: -194%;}
+
+#portfolio .App .mokup .device_m {width: 230px; background: url(../img/device_m2.png) no-repeat contain; transform: rotate(0);}
+#portfolio .App .mokup .App_main {left: 4%;} 
+#portfolio .App .mokup .App_page {left: 39%; height: 180px;}
+#portfolio .App .mokup .device_m .display {width: 32.5%; height: 90%; top:1.5%; left: 32%; border-radius: 8px; transform: perspective(40px) rotateX(1deg)}
+#portfolio .App .mokup .App_main .display {width: 37%; height: 90%; top: 3%; left: 29.9%; border-radius: 10px 10px 12px 10px; transform: perspective(638px) rotateX(1deg)}
+
+#portfolio .App .desc_box a, #portfolio .App .desc_box button, #portfolio .App .desc_box .hash_box span:hover, #portfolio .App .desc_box .hash_box span:focus {color: #0268b5; border-color: #0268b5;}
+#portfolio .App .desc_box a:hover, #container .App .desc_box button:hover {background: #0268b5; color: #fff;}
+#portfolio .App .mokup .App_main .display iframe {position: absolute; top: -132px; width: 100%;}
+#portfolio .App .mokup p {top: 99%; left: 19%;}
+
+/* Design */
+#design {position: relative;}
+#design .box {width: 1280px; margin: 30% auto;}
+#design .box > div {position: relative; top: 30%;}
+#design .modal-custom-button{float: none; width: 100vw; height: 130px; margin: 15px auto; border: none; background: no-repeat center/contain; cursor: pointer; opacity: 0.8;}
+#design .modal-custom-button:hover, #design .modal-custom-button:focus {opacity: 1;}
+#design .mod01 button {background-image: url(../img/Design_magazin_mokup.png);}
+#design .mod02 button {background-image: url(../img/Design_mailing_flower_mokup.png);}
+#design .mod03 button {background-image: url(../img/Design_sea_mailing_mokup.png);}
+#design .modal-custom{display: none; position: fixed; z-index: 1; padding: 100px 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+#design .modal-content{position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 60%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); -webkit-animation-name: animatetop; -webkit-animation-duration: 0.4s; animation-name: animatetop; animation-duration: 0.4s}
+#design .modal-content img {width: 100%; margin-bottom: 100px;}
+@-webkit-keyframes animatetop{
+    from{top: -300px; opacity:0}
+    to{top: 0; opacity: 1}}
+@keyframes animatetop{
+    from{top: -300px; opacity:0}
+    to{top: 0; opacity: 1}}
+#design .close-modal{color: rgb(126, 126, 126); float: right; font-size: 30px; font-weight: bold;}
+#design .close-modal:hover,.close-modal:focus{color: #000; text-decoration: none; cursor: pointer;}
+
+/* About */
+#about {color: #fff; overflow: auto;}
+#about .info {position: relative; width: 82vw; height: 100vh; margin: 13% auto 0;}
+#about .info:before {display: none; content: ''; position: absolute; top: 28%; width: 100%; height: 1px; background: #fff;}
+#about .info > div {position: static; width: 100%; height: 170px;}
+#about .info > div h3 {position: static; bottom: none; top: 0; font-size: 2.4rem; margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 10px;}
+#about .info > div:nth-child(even) h3 {position: static; margin-bottom: 30px; margin-top: 0;}
+#about .info > .lis_box h3, #about .info > .ski_box h3 {text-align: left; width: 80vw; margin-top: 30px;}
+#about .info .int_box {top: 70px; left: 0; margin-top: 120px;}
+#about .info .edu_box {top: 330px; left: 0; height: 200px;}
+#about .info .lis_box {top: 0; right: 0; width: auto;}
+#about .info .ski_box {top: 330px; right: 0;}
+#about .info .int_box .name, #about .info .int_box .name_detail, #about .info .lis_box .gtq, #about .info .lis_box .gtq_detail {margin-bottom: 10px;}
+#about .info p {float: left; width: 30%;}
+#about .info p, #about .info span {font-size: 1.8rem; font-weight: 500;}
+#about .info span {float: right; width: 70%; font-weight: 100;}
+#about .info .edu_box p{width: 65%;}
+#about .info .edu_box span{width: 30%;}
+#about .info .edu_box .major {width: 100%; margin-bottom: 20px;}
+#about .info .edu_box .class {letter-spacing: 1px;}
+#about .info .lis_box p {width: 65%;}
+#about .info .lis_box span {width: 30%;}
+#about .info .ski_box .icon {width: 100%; float: right;}
+#about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
+#about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
+#about .info .ski_box .icon li:hover img, #about .info .ski_box .icon li.on img{opacity: 1;}
+#about .info .ski_box .icon img:first-child {margin-left: 0;}
+#about .info .ski_box span {width: 100%; text-align: center; word-break: keep-all; font-size: 2.2rem; display: none;}
+#about .info .ski_box span.on {display: block; height: 70px; margin-bottom: 50px;}
+#about .int_box, #about .lis_box {margin-bottom: 0px;}
+
+#about .info .image {width: 100%; height: 65vh; transform: translate(0%, 0%);}
+#about .info .image figure {width: 300px; height: 300px; margin: 60px auto; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
+#about .info .image figure img {width: 100%;}
+#about .info .image .btn_box {width: 145px; margin: 20px auto;}
+#about .info .image button{width: 65px; height: 65px; background: no-repeat center/contain; border: none; opacity: 0.7; cursor: pointer;}
+#about .info .image button:hover, #about .info .image button:focus {opacity: 1;}
+#about .info .image #copybtn1 {background-image: url(../img/call.png); margin-right: 10px;}
+#about .info .image #copybtn2 {background-image: url(../img/mail.png);}

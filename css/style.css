@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(https://www.jsdelivr.com/package/npm/fullpage.js?version=2.9.4);
+@import url(https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap);
+/* common */
+html {font-size: 0.625rem;}
+body {font: 1.6rem 'Spoqa Han Sans Neo', sans-serif; height: auto;
+    background: linear-gradient(315deg, rgb(38, 22, 85) 0%, rgb(88, 44, 92) 41%, rgb(55, 38, 101) 60%, rgb(37, 40, 100) 83%, rgb(84, 37, 103)100%)}
+#container {position: relative; height: auto;}
+#container > div {height: 100vh;}
+a, span, button {transition: border-color .4s,color .4s,opacity .4s,transform .4s}
+.swiper-slide {overflow: hidden;}
+#container .swiper-pagination {position: absolute; height: 0; top: 40%; transform: translateY(-50%); right: 2%;}
+#container .swiper-pagination-bullet {width: 4px; height: 40px; margin: 20px 0; border-radius: 0; background-color: rgba(255,255,255,0.5);}
+
+/* background: linear-gradient(315deg, rgb(131, 81, 162) 0%,  rgb(226, 142, 177) 41%, rgb(172, 132, 181) 60%, rgb(129, 132, 190) 83%, rgb(255, 117, 198) 100%); */
+
+/* header */
+header {position: fixed; width: 100%; height: 120px; transition: all 0.5s; z-index: 100;}
+header h1 {position: relative; float: left; top: 7vh; left: 4vw; opacity: 0;}
+header h1::before{position: absolute; content: '&'/* 일단 &로 넣어봄 */; font-family: 'Yeseva One'; color: transparent; -webkit-text-stroke-width: 0.2px; -webkit-text-stroke-color: #fff; font-size: 10.0rem; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.5; text-shadow: 0 0 5px rgb(38, 22, 85); z-index: -1;}
+header h1 a{font-family: 'Cormorant Upright'; color: rgba(255,255,255,0.8); font-weight: bold;  font-size: 5.2rem; text-shadow: 0 0 5px rgba(0,0,0,0.8);}
+header h1 a:hover, #main header h1 a:focus {color: #fff;}
+.btn {display: none;}
+/*  header > gnb */
+header #gnb {float: right; width: 40%; height: 40px; padding-top: 80px;}
+header #gnb ul {width: 100%; height: inherit;}
+header #gnb ul li {float: left; width: 25%;  opacity: 0; text-align: center;}
+header #gnb ul li a{display: inline-block; font-size: 3.2rem; font-weight: 100; color: rgba(255,255,255,0.25);}
+header #gnb ul li a:hover, #gnb ul li a:focus{color: rgba(255,255,255,0.7);}
+header #gnb ul li a strong{color: rgba(255,255,255,0.7); font-weight: 100;}
+
+/* visual */
+#main {height: 100vh; max-width: 100vw;}
+#main .wrap {width: 100vw; height: 100vh; position: relative;}
+#main .wrap .circle {width: 500px; height: 500px; position: absolute; top: 50%; left: 50%; overflow: hidden; border-radius: 100%; background: url(../img/geine.png)no-repeat center/contain; transform: translate3d(0, 0, 0) translate(-50%, -50%) rotate(-25deg); box-shadow: 0 0 30px rgba(247, 255, 202, 0.5);}
+#main .wrap .circle .smoke {position: absolute; width: 530px; height: 530px; background: no-repeat center;animation-timing-function: ease-in-out; opacity: 1}
+#main .wrap .circle .smoke-one {top: -65%; left: -30%; background-image: url(../img/smoke01.png); animation: move1 10s infinite;}
+#main .wrap .circle .smoke-two {top: -60%; left: 30%; background-image: url(../img/smoke02.png); ; animation: move1 15s infinite;}
+#main .wrap .circle .smoke-three {top: 30%; left: -30%; background-image: url(../img/smoke03.png); animation: move2 20s infinite;}
+#main .wrap .circle .smoke-four {top: 0%; left: 40%; background-image: url(../img/smoke04.png); animation: move2 7s infinite;}
+#main .wrap .circle img {position: absolute; bottom: 0; right: 18%; width: 30%; height: 20%; opacity: 0.8;}
+    @keyframes move1
+        {0%, 100% {transform: scale(0) rotate(360deg);}
+        50% {transform: scale(1) rotate(-360deg)}}
+    @keyframes move2
+        {0%, 100% {transform: scale(1) rotate(-360deg); opacity: 1;}
+        50% {transform: scale(0.5) rotate(360deg); opacity: 0.5;}}
+#main .wrap .circle .fa-asterisk {position: absolute; font-size: 13px; color: #f6ffa6; opacity: 0.8;}
+#main .wrap .circle .star1 {top: 20%; left: 30%; animation: star 2s infinite;}
+#main .wrap .circle .star2 {top: 15%; right: 30%; animation: star 1.7s infinite;}
+#main .wrap .circle .star3 {top: 55%; left: 10%; animation: star 1.5s infinite;}   
+#main .wrap .circle .star4 {top: 70%; right: 10%; font-size: 5px; animation: star 1.9s infinite;}
+#main .wrap .circle .star5 {top: 80%; right: 65%; font-size: 5px; animation: star 1.2s  infinite;}
+    @keyframes star
+        {0%, 100% {transform: scale(0); opacity: 0;}
+        50% {transform: scale(1); opacity: 1;}}
+        
+#main .wrap .text_box {position: absolute; width: 100%; height: 70px; top: 50%; transform: translateY(-50%);}
+#main .wrap .text_box p {position: absolute; width: 300px; height: 130px; font: 10.2rem 'Great Vibes', cursive; color: #fff; text-align: center;  overflow-X: hidden; border-radius: 10%;}
+#main .wrap .text_box p strong{display: block; animation-duration: 2s;}
+    @keyframes appear1{ from {transform: translateX(300px);} to{transform: translateX(0);}}
+    @keyframes appear2{ from {transform: translateX(-300px);} to{transform: translateX(0);}}
+#main .wrap .text_box .f_text {left: 20%;}
+#main .wrap .text_box .f_text strong{animation-name: appear1;}
+#main .wrap .text_box .b_text {right: 20%;}
+#main .wrap .text_box .b_text strong{animation-name: appear2;}
+/* portfolio > swiper */
+h2 {position: fixed; font: 20.0rem 'Cormorant Upright' ; font-weight: 700; color: rgba(143, 63, 174, 0.4); margin-bottom: 40px; letter-spacing: -4px; bottom: 0; right: 50px; font-style: italic; z-index: -1;}
+#portfolio .swiper-wrapper .swiper-slide {height: 100vh;}
+#portfolio .page_controler {position: absolute; width: 250px; bottom: 5%; left: 50%; transform: translate(-50%); z-index: 100;}
+#portfolio .page_controler .swiper-pagination-bullet {margin: 0 16px; border-radius: 0; height: 10px; width: 10px;}
+#portfolio .page_controler .swiper-pagination-bullet-active {background: #ffb641;}
+#portfolio .swiper-wrapper {position: relative;}
+/* portfolio > defult - earth */
+#portfolio .swiper-slide .desc_box .inner {width: 60%; margin: 200px auto;}
+#portfolio .swiper-slide .desc_box {position: relative; float: left; width: 40%; top: 55px;}
+#portfolio .swiper-slide .desc_box::before{content: ''; position: absolute; width: 100%; height: 100vh; background: rgba(224, 255, 255, 0.8); transform: rotate(15deg); z-index: -1;}
+#portfolio .swiper-slide .desc_box h3 {font-size: 5.0rem; font-weight: 700;}
+#portfolio .swiper-slide .desc_box h3 span {display: block; font-weight: 500; margin-bottom: 40px;}
+#portfolio .swiper-slide .desc_box .hash_box {width: 300px; margin-bottom: 60px;}
+#portfolio .swiper-slide .desc_box .hash_box span{display: inline-block; height: 33px; line-height: 33px; padding: 0 10px; border: 1px solid #333; border-radius: 50px; color: #333; margin:0 10px 10px 0;}
+#portfolio .swiper-slide .desc_box .hash_box span:hover, #portfolio .swiper-slide .desc_box .hash_box span:focus{color: #017250; border-color: #017250;} 
+#portfolio .swiper-slide .desc_box a, #portfolio .desc_box button {padding: 20px 50px; background: transparent; color: #017250; cursor: pointer; display: inline-block; margin-right: 10px; border: 1px solid #017250; font-size: 1.8rem;}
+#portfolio .swiper-slide .desc_box a:hover, #container .desc_box button:hover {background: #017250; color: #fff;}
+#portfolio .swiper-slide .mokup {position: relative; float: right; width: 60%; top: 15px;}
+#portfolio .swiper-slide .mokup p {position: absolute; top: 20%; left: 14%;}
+#portfolio .swiper-slide .mokup p span {color: rgb(255, 255, 255, 0.2); font-size: 2.0rem; letter-spacing: 1px;}
+#portfolio .swiper-slide .mokup .w{display: block;}
+#portfolio .swiper-slide .mokup .m{display: none;}
+#portfolio .swiper-slide .mokup > div {position: absolute; height: 100vh; background: no-repeat center/contain;}
+#portfolio .swiper-slide .mokup > div .display {position: absolute; overflow: hidden; background: #017250; opacity: 1;}
+#portfolio .swiper-slide .mokup > div .display img {position: absolute; width: 100%; top: 0; left: 50%; transform: translateX(-50%); transition: all 10s;}
+#portfolio .swiper-slide .mokup .device_w {left: 15%; width: 800px; background-image: url(../img/device_w.png);}
+#portfolio .swiper-slide .mokup .device_w .display {width: 621px; height: 388px; top: 27.25%; left: 14.5%; transform: perspective(638px) rotateX(1deg)}
+#portfolio .swiper-slide .mokup .device_m {left: 5%; width: 150px; background-image: url(../img/device_m.png); transform: rotate3d(0, 0, 1, -10deg);}
+#portfolio .swiper-slide .mokup .device_m .display {width: 120px; height: 256px; top: 35.8%; left: 6%; border-radius: 14px; transform: rotate(-1deg)}
+
+/* portfolio - coustom color */
+#portfolio .earth .mokup .device_w .display:hover img {top: -931px;}
+#portfolio .earth .mokup .device_m .display:hover img {top: -573px;}
+
+#portfolio .heritage .desc_box a, #portfolio .heritage .desc_box button, #portfolio .heritage .desc_box .hash_box span:hover, #portfolio .heritage .desc_box .hash_box span:focus {color: #1e64b0; border-color: #1e64b0;}
+#portfolio .heritage .desc_box a:hover, #container .heritage .desc_box button:hover {background: #1e64b0; color: #fff;}
+#portfolio .heritage .desc_box a:nth-child(5) {width: 281px; margin-top: 10px; text-align: center;}
+#portfolio .heritage .mokup .device_w .display:hover img {top: -570px;}
+#portfolio .heritage .mokup .device_m .display:hover img {top: -710px;}
+
+#portfolio .THP .desc_box a, #portfolio .THP .desc_box button, #portfolio .THP .desc_box .hash_box span:hover, #portfolio .THP .desc_box .hash_box span:focus {color: #ff9a1f; border-color: #ff9a1f;}
+#portfolio .THP .desc_box a:hover, #portfolio .THP .desc_box button:hover {background: #ff9a1f; color: #fff;}
+#portfolio .THP .mokup .device_w .display:hover img {top: -471%;}
+#portfolio .THP .mokup .device_m .display:hover img {top: -549%;}
+
+#portfolio .kakao .desc_box a, #portfolio .kakao .desc_box button, #portfolio .kakao .desc_box .hash_box span:hover, #portfolio .kakao .desc_box .hash_box span:focus {color: #fae101; border-color: #fae101;}
+#portfolio .kakao .desc_box a:hover, #container .kakao .desc_box button:hover {background: #fae101; color: #fff;}
+#portfolio .kakao .mokup .device_w .display:hover img {top: -194%;}
+
+#portfolio .App .mokup > div .display {background: url(../img/APP_inrto_err.png)no-repeat center/contain;}
+#portfolio .App .mokup .device_m {width: 230px; background: url(../img/device_m2.png) no-repeat contain; transform: rotate(0);}
+#portfolio .App .mokup .App_main {left: 15%; width: 320px;} 
+#portfolio .App .mokup .App_page {left: 61%;}
+#portfolio .App .mokup .device_m .display {width: 180px; height: 392px; top: 28.2%; left: 7%; border-radius: 18px; transform: perspective(638px) rotateX(1deg)}
+#portfolio .App .mokup .App_main .display {width: 254px; height: 548px; top: 19.2%; left: 5.9%; border-radius: 28px 26px 23px 28px; transform: perspective(638px) rotateX(1deg)}
+#portfolio .App .mokup .App_main .display iframe {height: 100%; top: 0;}
+
+#portfolio .App .desc_box a, #portfolio .App .desc_box button, #portfolio .App .desc_box .hash_box span:hover, #portfolio .App .desc_box .hash_box span:focus {color: #0268b5; border-color: #0268b5;}
+#portfolio .App .desc_box a:hover, #container .App .desc_box button:hover {background: #0268b5; color: #fff;}
+#portfolio .App .mokup .App_main .display iframe {position: absolute; top: -132px; width: 100%;}
+#portfolio .App .mokup p {top: 14%; left: 10%;}
+
+/* Design */
+#design {position: relative;}
+#design .box {width: 1280px; margin: 13% auto;}
+#design .box > div {position: relative; top: 30%;}
+#design .modal-custom-button{float: left; width: 275px; height: 368px; margin: 75px; border: none; background: no-repeat center/contain; cursor: pointer; opacity: 0.8;}
+#design .modal-custom-button:hover, #design .modal-custom-button:focus {opacity: 1;}
+#design .mod01 button {background-image: url(../img/Design_magazin_mokup.png);}
+#design .mod02 button {background-image: url(../img/Design_mailing_flower_mokup.png);}
+#design .mod03 button {background-image: url(../img/Design_sea_mailing_mokup.png);}
+#design .modal-custom{display: none; position: fixed; z-index: 1; padding: 100px 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+#design .modal-content{position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 60%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); -webkit-animation-name: animatetop; -webkit-animation-duration: 0.4s; animation-name: animatetop; animation-duration: 0.4s}
+#design .modal-content img {width: 100%; margin-bottom: 100px;}
+@-webkit-keyframes animatetop{
+    from{top: -300px; opacity:0}
+    to{top: 0; opacity: 1}}
+@keyframes animatetop{
+    from{top: -300px; opacity:0}
+    to{top: 0; opacity: 1}}
+#design .close-modal{color: rgb(126, 126, 126); float: right; font-size: 30px; font-weight: bold;}
+#design .close-modal:hover,.close-modal:focus{color: #000; text-decoration: none; cursor: pointer;}
+
+
+
+
+
+
+
+
+
+/* About */
+#about {/* width: 100%; height: 100vh; background: url(../img/about.png); */ color: #fff;}
+#about .info {position: relative; width: 82%; height: 100%; margin: 13% auto 0;}
+#about .info:before {content: ''; position: absolute; top: 28%; width: 100%; height: 1px; background: #fff;}
+#about .info > div {position: absolute; width: 560px; height: 210px;}
+#about .info > div h3 {position: absolute; bottom: 0; font-size: 3.6rem;}
+#about .info > div:nth-child(even) h3 {position: static; margin-bottom: 50px; margin-top: 0;}
+#about .info > .lis_box h3, #about .info > .ski_box h3 {text-align: right; width: 100%;}
+#about .info .int_box {top: 0; left: 0;}
+#about .info .edu_box {top: 330px; left: 0;}
+#about .info .lis_box {top: 0; right: 0; width: 515px;}
+#about .info .ski_box {top: 330px; right: 0;}
+#about .info .int_box .name, #about .info .int_box .name_detail, #about .info .lis_box .gtq, #about .info .lis_box .gtq_detail {margin-bottom: 20px;}
+#about .info p {float: left; width: 120px;}
+#about .info p, #about .info span {font-size: 2.4rem; font-weight: 500;}
+#about .info span {float: right; width: 440px; font-weight: 100;}
+#about .info .edu_box p{width: 80%;}
+#about .info .edu_box span{width: 20%;}
+#about .info .edu_box .major {width: 100%; margin-bottom: 20px;}
+#about .info .edu_box .class {letter-spacing: -1px;}
+#about .info .lis_box p {width: 65%;}
+#about .info .lis_box span {width: 20%;}
+#about .info .ski_box .icon {width: 480px; float: right;}
+#about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
+#about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
+#about .info .ski_box .icon li:hover img, #about .info .ski_box .icon li.on img{opacity: 1;}
+#about .info .ski_box .icon img:first-child {margin-left: 0;}
+#about .info .ski_box span {width: 100%; text-align: right; display: none;}
+#about .info .ski_box span.on {display: block;}
+#about .int_box, #about .lis_box {margin-bottom: 50px;}
+
+#about .info .image {width: 360px; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#about .info .image figure {width: 360px; height: 360px; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
+#about .info .image figure img {width: 100%;}
+#about .info .image .btn_box {width: 180px; margin: 20px auto;}
+#about .info .image button, #about .info .image a {display:inline-block; width: 65px; height: 65px; background: no-repeat center/contain; border: none; opacity: 0.7; cursor: pointer;}
+#about .info .image button:hover, #about .info .image button:focus, #about .info .image a:hover, #about .info .image a:focus {opacity: 1;}
+#about .info .image #copybtn1 {background-image: url(../img/call.png); margin-right: 44px;}
+#about .info .image #copybtn2 {background-image: url(../img/mail.png);}
