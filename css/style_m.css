@@ -163,8 +163,8 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #about .info .int_box {top: 70px; left: 0; margin-top: 120px;}
 #about .info .ski_box {top: 330px; right: 0;}
 #about .info .int_box .name, #about .info .int_box .name_detail {margin-bottom: 10px;}
-#about .info p {width: 30%;}
-#about .info p, #about .info span {font-size: 1.8rem;}
+#about .info .int_box p {width: 30%;}
+#about .info .int_box p, #about .info .int_box span {font-size: 1.8rem;}
 #about .info span {float: right; width: 70%;}
 #about .info .ski_box .icon {width: 100%; float: right;}
 #about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
