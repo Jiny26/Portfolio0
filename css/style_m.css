@@ -162,7 +162,7 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #about .info > .ski_box h3 {text-align: left; width: 80vw; margin-top: 30px;}
 #about .info .int_box {top: 70px; left: 0; margin-top: 120px;}
 #about .info .ski_box {top: 330px; right: 0;}
-#about .info .int_box .name, #about .info .int_box .name_detail {margin-bottom: 10px;}
+#about .info .int_box p, #about .info .int_box .name_detail {margin-bottom: 10px;}
 #about .info .int_box p {width: 30%;}
 #about .info .int_box p, #about .info .int_box span {font-size: 1.8rem;}
 #about .info span {float: right; width: 70%;}
