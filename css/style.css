@@ -154,24 +154,17 @@ h2 {position: fixed; font: 20.0rem 'Cormorant Upright' ; font-weight: 700; color
 
 
 
-
-
-
-
 /* About */
-#about {/* width: 100%; height: 100vh; background: url(../img/about.png); */ color: #fff;}
+#about {color: #fff;}
 #about .info {position: relative; width: 82%; height: 100%; margin: 13% auto 0;}
-#about .info:before {content: ''; position: absolute; top: 28%; width: 100%; height: 1px; background: #fff;}
-#about .info > div {position: absolute; width: 560px; height: 210px;}
-#about .info > div h3 {position: absolute; bottom: 0; font-size: 3.6rem;}
-#about .info > div:nth-child(even) h3 {position: static; margin-bottom: 50px; margin-top: 0;}
+#about .info > div {position: absolute; width: 560px; height: 240px;}
+#about .info > div h3 {font-size: 3.6rem; margin-bottom: 30px;}
 #about .info > .ski_box h3 {text-align: right; width: 100%;}
 #about .info .int_box {top: 0; left: 0;}
 #about .info .ski_box {top: 330px; right: 0;}
-#about .info .int_box .name, #about .info .int_box .name_detail{margin-bottom: 20px;}
-#about .info p {float: left; width: 120px;}
-#about .info p, #about .info span {font-size: 2.4rem; font-weight: 500;}
-#about .info span {float: right; width: 440px; font-weight: 100;}
+#about .info p {float: left;}
+#about .info p, #about .info span {margin-bottom: 20px; font-size: 2.4rem; font-weight: 500;}
+#about .info span {float: left; width: 440px; font-weight: 100;}
 #about .info .ski_box .icon {width: 480px; float: right;}
 #about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
 #about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
@@ -179,7 +172,6 @@ h2 {position: fixed; font: 20.0rem 'Cormorant Upright' ; font-weight: 700; color
 #about .info .ski_box .icon img:first-child {margin-left: 0;}
 #about .info .ski_box span {width: 100%; text-align: right; display: none;}
 #about .info .ski_box span.on {display: block;}
-#about .int_box {margin-bottom: 50px;}
 #about .info .image {width: 360px; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #about .info .image figure {width: 360px; height: 360px; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
 #about .info .image figure img {width: 100%;}
