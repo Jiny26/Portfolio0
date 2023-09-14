@@ -161,21 +161,13 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #about .info > div {position: static; width: 100%; height: 170px;}
 #about .info > div h3 {position: static; bottom: none; top: 0; font-size: 2.4rem; margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 10px;}
 #about .info > div:nth-child(even) h3 {position: static; margin-bottom: 30px; margin-top: 0;}
-#about .info > .lis_box h3, #about .info > .ski_box h3 {text-align: left; width: 80vw; margin-top: 30px;}
+#about .info > .ski_box h3 {text-align: left; width: 80vw; margin-top: 30px;}
 #about .info .int_box {top: 70px; left: 0; margin-top: 120px;}
-#about .info .edu_box {top: 330px; left: 0; height: 200px;}
-#about .info .lis_box {top: 0; right: 0; width: auto;}
 #about .info .ski_box {top: 330px; right: 0;}
-#about .info .int_box .name, #about .info .int_box .name_detail, #about .info .lis_box .gtq, #about .info .lis_box .gtq_detail {margin-bottom: 10px;}
+#about .info .int_box .name, #about .info .int_box .name_detail {margin-bottom: 10px;}
 #about .info p {float: left; width: 30%;}
 #about .info p, #about .info span {font-size: 1.8rem; font-weight: 500;}
 #about .info span {float: right; width: 70%; font-weight: 100;}
-#about .info .edu_box p{width: 65%;}
-#about .info .edu_box span{width: 30%;}
-#about .info .edu_box .major {width: 100%; margin-bottom: 20px;}
-#about .info .edu_box .class {letter-spacing: 1px;}
-#about .info .lis_box p {width: 65%;}
-#about .info .lis_box span {width: 30%;}
 #about .info .ski_box .icon {width: 100%; float: right;}
 #about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
 #about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
@@ -183,7 +175,7 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #about .info .ski_box .icon img:first-child {margin-left: 0;}
 #about .info .ski_box span {width: 100%; text-align: center; word-break: keep-all; font-size: 2.2rem; display: none;}
 #about .info .ski_box span.on {display: block; height: 70px; margin-bottom: 50px;}
-#about .int_box, #about .lis_box {margin-bottom: 0px;}
+#about .int_box {margin-bottom: 0px;}
 
 #about .info .image {width: 100%; height: 65vh; transform: translate(0%, 0%);}
 #about .info .image figure {width: 300px; height: 300px; margin: 60px auto; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
