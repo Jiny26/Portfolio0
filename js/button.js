@@ -11,12 +11,12 @@ $(document).ready(function() {
             e.preventDefault();
             $(this).toggleClass('active-' + (index+1));
             $('#gnb').fadeIn(700).toggleClass('on')
-            $('header').css({height: 100 +'vh'})
+            $('header').css({height: `100vh`})
             });
             $(list).on('click', function() {
                 $('#gnb').fadeOut(700).removeClass('on')
                 $(burger).removeClass('active-1');
-                $('header').css({height: 40 +'px'})
+                $('header').css({height: `40px`})
             });
         };
     });
