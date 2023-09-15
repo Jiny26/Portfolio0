@@ -134,16 +134,13 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #portfolio .App .mokup p {top: 99%; left: 19%;}
 
 /* Design */
-#design {position: relative;}
-#design .box {width: 1280px; margin: 30% auto;}
-#design .box > div {position: relative; top: 30%;}
-#design .modal-custom-button{float: none; width: 100vw; height: 130px; margin: 15px auto; border: none; background: no-repeat center/contain; cursor: pointer; opacity: 0.8;}
-#design .modal-custom-button:hover, #design .modal-custom-button:focus {opacity: 1;}
-#design .mod01 button {background-image: url(../img/Design_magazin_mokup.png);}
-#design .mod02 button {background-image: url(../img/Design_mailing_flower_mokup.png);}
-#design .mod03 button {background-image: url(../img/Design_sea_mailing_mokup.png);}
-#design .modal-custom{display: none; position: fixed; z-index: 1; padding: 100px 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
-#design .modal-content{position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 60%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); -webkit-animation-name: animatetop; -webkit-animation-duration: 0.4s; animation-name: animatetop; animation-duration: 0.4s}
+#design .box {margin: 30% auto;}
+
+#design .modal-custom-button{float: none; width: 100vw; height: 130px; margin: 15px auto;}
+
+
+
+
 #design .modal-content img {width: 100%; margin-bottom: 100px;}
 @-webkit-keyframes animatetop{
     from{top: -300px; opacity:0}
@@ -155,31 +152,22 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #design .close-modal:hover,.close-modal:focus{color: #000; text-decoration: none; cursor: pointer;}
 
 /* About */
-#about {color: #fff; overflow: auto;}
-#about .info {position: relative; width: 82vw; height: 100vh; margin: 13% auto 0;}
-#about .info > div {position: static; width: 100%; height: 170px;}
-#about .info > div h3 {font-size: 2.4rem; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 10px;}
-#about .info > .ski_box h3 {text-align: left; width: 80vw; margin-top: 30px;}
-#about .info .int_box {top: 70px; left: 0; margin-top: 120px;}
-#about .info .ski_box {top: 330px; right: 0;}
-#about .info .int_box p, #about .info .int_box .name_detail {margin-bottom: 10px;}
-#about .info .int_box p {width: 30%;}
-#about .info .int_box p, #about .info .int_box span {font-size: 1.8rem;}
-#about .info span {float: right; width: 70%;}
-#about .info .ski_box .icon {width: 100%; float: right;}
-#about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
-#about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
-#about .info .ski_box .icon li:hover img, #about .info .ski_box .icon li.on img{opacity: 1;}
-#about .info .ski_box .icon img:first-child {margin-left: 0;}
-#about .info .ski_box span {width: 100%; text-align: center; word-break: keep-all; font-size: 2.2rem; display: none;}
-#about .info .ski_box span.on {display: block; height: 70px; margin-bottom: 50px;}
-#about .int_box {margin-bottom: 0px;}
-
-#about .info .image {width: 100%; height: 65vh; transform: translate(0%, 0%);}
-#about .info .image figure {width: 300px; height: 300px; margin: 60px auto; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
-#about .info .image figure img {width: 100%;}
-#about .info .image .btn_box {width: 145px; margin: 20px auto;}
-#about .info .image button{width: 65px; height: 65px; background: no-repeat center/contain; border: none; opacity: 0.7; cursor: pointer;}
-#about .info .image button:hover, #about .info .image button:focus {opacity: 1;}
-#about .info .image #copybtn1 {background-image: url(../img/call.png); margin-right: 10px;}
-#about .info .image #copybtn2 {background-image: url(../img/mail.png);}
+#about {overflow: auto;}
+#about .info { width: 82vw; height: 100vh;}
+#about .info > div {position: static; width: 100%; height: 250px;}
+#about .info .int_box {margin-top: 150px;}
+#about .info > div h3 {font-size: 2.4rem; margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 10px;}
+#about .info > .ski_box h3 {width: 80vw; margin-top: 30px; margin-bottom: 30px; text-align: left;}
+#about .info p {width: 20%;}
+#about .info p, #about .info span {font-size: 1.8rem;}
+#about .info span {width: 80%;}
+#about .info .int_box > p.Education {width: 60%;}
+#about .info .int_box > span.Education {width: 40%;}
+#about .info .ski_box .icon {width: 95%; height: 30%; margin: 0 auto; float: none;}
+#about .info .ski_box .icon li:first-child {margin-left: 0;}
+#about .info .ski_box span {text-align: center; word-break: keep-all; font-size: 1.8rem;}
+#about .info .ski_box span.on {height: 70px; margin-bottom: 50px;}
+#about .info .image {width: 100%; height: 65vh; transform: translate(0%, -5%);}
+#about .info .image figure {width: 300px; height: 300px; margin: 60px auto;}
+#about .info .image .btn_box {width: 145px;}
+#about .info .image #copybtn1 {margin-right: 10px;}

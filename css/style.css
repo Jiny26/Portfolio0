@@ -134,11 +134,17 @@ h2 {position: fixed; font: 20.0rem 'Cormorant Upright' ; font-weight: 700; color
 #design .box {width: 1280px; margin: 13% auto;}
 #design .box > div {position: relative; top: 30%;}
 #design .modal-custom-button{float: left; width: 275px; height: 368px; margin: 75px; border: none; background: no-repeat center/contain; cursor: pointer; opacity: 0.8;}
+
+
 #design .modal-custom-button:hover, #design .modal-custom-button:focus {opacity: 1;}
 #design .mod01 button {background-image: url(../img/Design_magazin_mokup.png);}
 #design .mod02 button {background-image: url(../img/Design_mailing_flower_mokup.png);}
 #design .mod03 button {background-image: url(../img/Design_sea_mailing_mokup.png);}
+
+
 #design .modal-custom{display: none; position: fixed; z-index: 1; padding: 100px 0; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+
+
 #design .modal-content{position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 60%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); -webkit-animation-name: animatetop; -webkit-animation-duration: 0.4s; animation-name: animatetop; animation-duration: 0.4s}
 #design .modal-content img {width: 100%; margin-bottom: 100px;}
 @-webkit-keyframes animatetop{
@@ -150,34 +156,32 @@ h2 {position: fixed; font: 20.0rem 'Cormorant Upright' ; font-weight: 700; color
 #design .close-modal{color: rgb(126, 126, 126); float: right; font-size: 30px; font-weight: bold;}
 #design .close-modal:hover,.close-modal:focus{color: #000; text-decoration: none; cursor: pointer;}
 
-
-
-
-
 /* About */
 #about {color: #fff;}
 #about .info {position: relative; width: 82%; height: 100%; margin: 13% auto 0;}
-#about .info > div {position: absolute; top: 100px; width: 560px; height: 240px;}
-#about .info > div h3 {font-size: 3.6rem; margin-bottom: 30px;}
-#about .info > .ski_box h3 {text-align: right; width: 100%;}
+#about .info > div {position: absolute; top: 100px; width: 560px; height: 210px;}
 #about .info .int_box {left: 0;}
 #about .info .ski_box {right: 0;}
-#about .info .int_box p {float: left; margin-bottom: 20px; font-size: 2.4rem; font-weight: 500;}
-#about .info .int_box p span {float: right;}
-.int_box span:last-child {font-size: 1.8rem; font-weight: 100;
-}
-#about .info .ski_box .icon {width: 480px; float: right;}
+#about .info > div h3 {font-size: 3.6rem; margin-bottom: 28px;}
+#about .info > .ski_box h3 {width: 100%;margin-bottom: 50px; text-align: right;}
+#about .info p {float: left; width: 120px;}
+#about .info p, #about .info span {font-size: 2.4rem; font-weight: 500; margin-bottom: 20px;}
+#about .info .int_box > span {float: right; width: 75%; font-weight: 100;}
+#about .info .int_box > p.Education {width: 250px;}
+#about .info .int_box > p.Education > span{font-size: 1.8rem; font-weight: 100;}
+#about .info .int_box > span.Education {width: 300px;}
+#about .info .ski_box .icon {width: 100%; float: right;}
 #about .info .ski_box .icon li {width: calc(100%/6 - 15px); margin-left: 15px; float: left; cursor: pointer;}
 #about .info .ski_box .icon li img {width: 100%; margin-bottom: 20px; opacity: 0.5;}
 #about .info .ski_box .icon li:hover img, #about .info .ski_box .icon li.on img{opacity: 1;}
 #about .info .ski_box .icon img:first-child {margin-left: 0;}
-#about .info .ski_box span {width: 100%; text-align: right; display: none;}
+#about .info .ski_box span {width: 100%; text-align: right; font-weight: 100; display: none;}
 #about .info .ski_box span.on {display: block;}
 #about .info .image {width: 360px; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #about .info .image figure {width: 360px; height: 360px; border-radius: 50%; border: 0px solid #fff; box-sizing: border-box; border-bottom-width: 2px; overflow: hidden;}
 #about .info .image figure img {width: 100%;}
 #about .info .image .btn_box {width: 180px; margin: 20px auto;}
 #about .info .image button, #about .info .image a {display:inline-block; width: 65px; height: 65px; background: no-repeat center/contain; border: none; opacity: 0.7; cursor: pointer;}
-#about .info .image button:hover, #about .info .image button:focus, #about .info .image a:hover, #about .info .image a:focus {opacity: 1;}
+#about .info .image button:hover, #about .info .image button:focus{opacity: 1;}
 #about .info .image #copybtn1 {background-image: url(../img/call.png); margin-right: 44px;}
 #about .info .image #copybtn2 {background-image: url(../img/mail.png);}
