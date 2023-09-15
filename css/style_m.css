@@ -161,8 +161,8 @@ h2 {position: fixed; font: 10.0rem 'Cormorant Upright'; font-weight: 700; color:
 #about .info p {width: 20%;}
 #about .info p, #about .info span {font-size: 1.8rem;}
 #about .info span {width: 80%;}
-#about .info .int_box > p.Education {width: 60%;}
-#about .info .int_box > span.Education {width: 40%;}
+#about .info .int_box p.Education {width: 60%;}
+#about .info .int_box span.Education {width: 40%;}
 #about .info .ski_box .icon {width: 95%; height: 30%; margin: 0 auto; float: none;}
 #about .info .ski_box .icon li:first-child {margin-left: 0;}
 #about .info .ski_box span {text-align: center; word-break: keep-all; font-size: 1.8rem;}
